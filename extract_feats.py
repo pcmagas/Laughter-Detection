@@ -19,10 +19,10 @@ def get_slices(data, time, frequency, overlay = 0):
 
 
 #Collect the wav files and their transcriptions
-xml_files= glob("/home/filippakos/Documents/Projects/Laughter Detection/ami_public_manual/words/EN*.xml")
+xml_files= glob("./ami_public_manual/words/EN*.xml")
 xml_files.sort()
 
-wav_files = [y for x in os.walk('/home/filippakos/Documents/Projects/Laughter Detection/amicorpus') for y in glob(os.path.join(x[0], 'EN*Headset-*.wav'))]
+wav_files = [y for x in os.walk('./amicorpus') for y in glob(os.path.join(x[0], 'EN*Headset-*.wav'))]
 
 wav_files.sort()
 

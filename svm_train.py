@@ -9,11 +9,11 @@ from time import time
 import logging
 import matplotlib.pyplot as plt
 from sklearn.cross_validation import train_test_split
-from sklearn.grid_search import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 
 def plot_confusion_matrix(cm,target_names, title='Confusion matrix', cmap=plt.cm.Blues):
+    #taken from http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
@@ -59,8 +59,7 @@ print("done in %0.3fs" % (time() - t0))
 print(classification_report(y_test, y_pred,target_names=['Non-Laughter','Laughter']))
 cm = confusion_matrix(y_test, y_pred)
 
-# Normalize the confusion matrix by row (i.e by the number of samples
-# in each class)
+# Normalize the confusion matrix by row
 cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
 print('Normalized confusion matrix')
 print(cm_normalized)
