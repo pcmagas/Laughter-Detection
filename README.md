@@ -1,2 +1,2 @@
 # Laughter-Detection
-Advanced Tutorial Classifiers using Python and Sklearn: Laughter Detection
+Advanced Tutorial on Classifiers using Python and Sklearn: Laughter Detection
